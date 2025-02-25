@@ -1,0 +1,115 @@
+/* Fundo Geral */
+body {
+    background: linear-gradient(to right, rgba(240, 248, 255, 0.7), rgba(255, 255, 255, 0.7)), url('https://images.unsplash.com/photo-1576222042452-027b054d1b08'); /* Gradiente sutil com imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(0, 115, 177, 0.9); /* Cor azul mais forte com transparência */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Conteúdo Principal */
+main {
+    margin: 20px auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade para permitir o fundo visível */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    max-width: 1200px;
+}
+
+/* Título das Vagas */
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Lista de Vagas */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.vaga {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.vaga:hover {
+    transform: translateY(-5px);
+}
+
+.vaga h3 {
+    font-size: 1.3rem;
+    color: #0073b1;
+    margin-bottom: 10px;
+}
+
+.vaga p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.vaga a {
+    display: inline-block;
+    background-color: #0073b1;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.vaga a:hover {
+    background-color: #005c8b;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        padding: 20px;
+    }
+}
