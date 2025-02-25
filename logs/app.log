@@ -1,0 +1,164 @@
+info: Servidor rodando em http://localhost:8080
+info: Buscando vagas do Hard Franca...
+warn: Nenhuma vaga disponível para exibir.
+error: Erro ao buscar vagas: Waiting for selector `.col-md-8 h4` failed: Waiting failed: 30000ms exceeded
+warn: Nenhuma vaga disponível para exibir.
+warn: Nenhuma vaga disponível para exibir.
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-13T22:31:22.777Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-13T22:31:22.796Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-13T22:31:32.687Z"}
+info: Vagas encontradas: 280 {"timestamp":"2025-02-13T22:31:32.750Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-13T22:31:32.755Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T11:57:39.474Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T11:57:39.484Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T11:57:45.208Z"}
+info: Vagas encontradas: 276 {"timestamp":"2025-02-15T11:57:45.271Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T11:57:45.273Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T12:29:51.329Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T12:29:51.339Z"}
+info: Vagas capturadas: 138 {"timestamp":"2025-02-15T12:29:56.336Z"}
+info: Vagas únicas após filtro: 136 {"timestamp":"2025-02-15T12:29:56.338Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T12:29:56.339Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T12:33:05.992Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T12:33:05.995Z"}
+{"level":"info","message":"Vagas capturadas: 138","timestamp":"2025-02-15T12:33:10.846Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T12:33:10.847Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T12:33:10.850Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T12:49:58.686Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T12:49:58.690Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T12:50:06.364Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T12:50:06.366Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T12:50:06.367Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T12:52:01.992Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T12:52:01.996Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T12:52:07.230Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T12:52:07.231Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T12:52:07.233Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T12:57:04.708Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T12:57:04.712Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T12:57:10.082Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T12:57:10.083Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T12:57:10.084Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T13:03:35.561Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T13:03:35.565Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T13:03:41.084Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T13:03:41.086Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T13:03:41.088Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T13:07:03.644Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T13:07:03.648Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T13:07:08.445Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T13:07:08.446Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T13:07:08.448Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T13:15:48.305Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T13:15:48.309Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 138","timestamp":"2025-02-15T13:15:54.767Z"}
+{"level":"info","message":"Vagas únicas após filtro: 136","timestamp":"2025-02-15T13:15:54.771Z"}
+{"jobCount":136,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T13:15:54.775Z"}
+{"level":"info","message":"Servidor rodando em http://localhost:8080","timestamp":"2025-02-15T13:26:42.210Z"}
+{"level":"info","message":"Buscando vagas do Hard Franca...","timestamp":"2025-02-15T13:26:42.215Z"}
+{"level":"info","message":"Gerando HTML com as vagas...","timestamp":"2025-02-15T13:26:42.216Z"}
+{"level":"info","message":"HTML gerado com sucesso!","timestamp":"2025-02-15T13:26:42.219Z"}
+{"level":"info","message":"Vagas capturadas antes do filtro: 136","timestamp":"2025-02-15T13:26:47.378Z"}
+{"level":"info","message":"Vagas únicas após filtro: 134","timestamp":"2025-02-15T13:26:47.379Z"}
+{"jobCount":134,"level":"info","message":"Vagas atualizadas com sucesso!","timestamp":"2025-02-15T13:26:47.381Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T13:42:13.773Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T13:42:13.783Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T13:42:19.320Z"}
+info: Vagas encontradas: 270 {"timestamp":"2025-02-15T13:42:19.386Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T13:42:19.388Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T13:52:32.595Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T13:52:32.608Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T13:52:38.241Z"}
+info: Vagas encontradas: 270 {"timestamp":"2025-02-15T13:52:38.312Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T13:52:38.314Z"}
+error: Erro ao buscar vagas: generateStatic is not defined {"timestamp":"2025-02-15T13:52:38.315Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T13:54:57.520Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T13:54:57.530Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T13:55:02.640Z"}
+info: Vagas encontradas: 270 {"timestamp":"2025-02-15T13:55:02.680Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T13:55:02.682Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T13:56:00.843Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T13:56:00.854Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T13:56:06.304Z"}
+info: Vagas encontradas: 270 {"timestamp":"2025-02-15T13:56:06.363Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T13:56:06.365Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T13:59:57.388Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T13:59:57.399Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:00:02.737Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:00:02.836Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:00:02.842Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:01:35.566Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:01:35.583Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:01:41.344Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:01:41.419Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:01:41.425Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:02:03.517Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:02:03.528Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:02:08.986Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:02:09.058Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:02:09.062Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:03:23.712Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:03:23.721Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:03:29.453Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:03:29.511Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:03:29.517Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:06:15.919Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:06:15.929Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:06:21.186Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:06:21.270Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:06:21.275Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:11:44.291Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:11:44.303Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:11:49.788Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:11:49.845Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:11:49.849Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:13:44.341Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:13:44.350Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:13:49.516Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:13:49.588Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:13:49.593Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:20:38.631Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:20:38.641Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:20:44.214Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:20:44.285Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:20:44.289Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:22:50.866Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:22:50.875Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:22:56.135Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:22:56.212Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:22:56.218Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:24:43.351Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:24:43.367Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:24:49.489Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:24:49.570Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:24:49.574Z"}
+info: Buscando vagas do Hard Franca... {"timestamp":"2025-02-15T14:27:51.216Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:27:51.226Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:27:56.446Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:27:56.530Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:27:56.535Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-02-15T14:31:37.818Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:31:37.894Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:31:43.369Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:31:43.451Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:31:43.458Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-02-15T14:34:12.486Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:34:12.497Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:34:18.625Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:34:18.691Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:34:18.696Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-02-15T14:35:55.620Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:35:55.674Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:36:01.219Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:36:01.279Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:36:01.284Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-02-15T14:38:36.906Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:38:36.921Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:38:42.635Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:38:42.703Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:38:42.708Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-02-15T14:40:35.382Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:40:35.391Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:40:40.976Z"}
+info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:40:41.047Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:40:41.051Z"}
