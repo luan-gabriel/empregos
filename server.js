@@ -125,3 +125,14 @@ const PORT = 8080;
 app.listen(PORT, () => {
     logger.info(`Servidor rodando em http://localhost:${PORT}`);
 });
+
+const cron = require("node-cron");
+const { atualizarVagas } = require("./scraper"); // Importa a função que faz o scraping
+
+// Agenda a execução diária às 9h da manhã
+cron.schedule("0 9 * * *", () => {
+    console.log("Executando atualização diária de vagas...");
+    atualizarVagas();
+}, {
+    timezone: "America/Sao_Paulo" // Define o fuso horário para o Brasil
+});
