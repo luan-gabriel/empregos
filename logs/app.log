@@ -162,3 +162,8 @@ info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-02-15T14:40:3
 info: Página carregada com sucesso. {"timestamp":"2025-02-15T14:40:40.976Z"}
 info: Vagas encontradas: 268 {"timestamp":"2025-02-15T14:40:41.047Z"}
 info: Vagas atualizadas com sucesso! {"timestamp":"2025-02-15T14:40:41.051Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-03-04T22:07:03.888Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-04T22:07:03.899Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-03-04T22:07:16.804Z"}
+info: Vagas encontradas: 230 {"timestamp":"2025-03-04T22:07:17.051Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-03-04T22:07:17.061Z"}
