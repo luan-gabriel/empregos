@@ -53,8 +53,9 @@ h2 {
     gap: 20px;
 }
 
+/* Vaga com fundo cinza claro */
 .vaga {
-    background: white;
+    background-color: #f4f4f4; /* Cinza claro para o fundo */
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;

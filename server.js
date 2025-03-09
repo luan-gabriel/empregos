@@ -48,8 +48,8 @@ app.get("/", (req, res) => {
     res.render("index", { jobs });
 });
 
-// Função para buscar vagas no Hard Franca
-async function fetchJobs() {
+// Função para buscar e atualizar vagas no Hard Franca
+async function atualizarVagas() {
     try {
         logger.info("Buscando vagas em minha região...");
 
@@ -62,10 +62,6 @@ async function fetchJobs() {
         });
 
         logger.info("Página carregada com sucesso.");
-
-        // Selecionar os anúncios
-        const selector = "#anuncio-dest";
-        await page.waitForSelector(selector, { timeout: 30000 });
 
         const jobs = await page.evaluate(() => {
             const jobElements = document.querySelectorAll("#anuncio-dest > div");
@@ -81,10 +77,8 @@ async function fetchJobs() {
         logger.info(`Vagas encontradas: ${jobs.length}`);
 
         if (jobs.length > 0) {
-            // Filtrar as vagas para remover as com descrição "Descrição não disponível"
             const filteredJobs = jobs.filter(job => job.description !== "Descrição não disponível");
 
-            // Carregar vagas existentes do arquivo para evitar duplicatas
             let existingJobs = [];
             try {
                 if (fs.existsSync(JOBS_FILE)) {
@@ -95,17 +89,14 @@ async function fetchJobs() {
                 logger.error("Erro ao ler o arquivo jobs.json: " + error.message);
             }
 
-            // Filtrar as vagas duplicadas com base no título
             const updatedJobs = [...existingJobs, ...filteredJobs].filter((job, index, self) =>
-                index === self.findIndex((t) => t.title === job.title)
+                index === self.findIndex(t => t.title === job.title)
             );
 
-            // Escrever as vagas no arquivo jobs.json
             fs.writeFileSync(JOBS_FILE, JSON.stringify(updatedJobs, null, 2));
             logger.info("Vagas atualizadas com sucesso!");
 
-            // Gerar o HTML estático
-            generateStatic(); // Chama a função para gerar o HTML estático
+            generateStatic(); // Gerar HTML estático após atualização
 
         } else {
             logger.warn("Nenhuma vaga encontrada no site.");
@@ -118,21 +109,16 @@ async function fetchJobs() {
 }
 
 // Agendamento diário para buscar vagas
-fetchJobs(); // Executar ao iniciar o servidor
+const cron = require("node-cron");
+cron.schedule("0 9 * * *", () => {
+    logger.info("Executando atualização diária de vagas...");
+    atualizarVagas(); // Chama a função para fazer o scraping
+}, {
+    timezone: "America/Sao_Paulo" // Define o fuso horário para o Brasil
+});
 
 // Iniciar o servidor
 const PORT = 8080;
 app.listen(PORT, () => {
     logger.info(`Servidor rodando em http://localhost:${PORT}`);
-});
-
-const cron = require("node-cron");
-const { atualizarVagas } = require("./scraper"); // Importa a função que faz o scraping
-
-// Agenda a execução diária às 9h da manhã
-cron.schedule("0 9 * * *", () => {
-    console.log("Executando atualização diária de vagas...");
-    atualizarVagas();
-}, {
-    timezone: "America/Sao_Paulo" // Define o fuso horário para o Brasil
 });
