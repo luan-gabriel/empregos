@@ -118,7 +118,20 @@ cron.schedule("0 9 * * *", () => {
 });
 
 // Iniciar o servidor
-const PORT = 8080;
-app.listen(PORT, () => {
+const PORT = 8081;
+app.listen(PORT, async () => {
     logger.info(`Servidor rodando em http://localhost:${PORT}`);
+
+    // Apagar as vagas antigas
+    try {
+        if (fs.existsSync(JOBS_FILE)) {
+            fs.writeFileSync(JOBS_FILE, JSON.stringify([])); // Limpa o arquivo
+            logger.info("Arquivo jobs.json limpo.");
+        }
+    } catch (error) {
+        logger.error("Erro ao limpar jobs.json: " + error.message);
+    }
+
+    // Buscar novas vagas automaticamente
+    await atualizarVagas();
 });

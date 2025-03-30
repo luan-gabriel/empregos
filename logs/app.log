@@ -172,3 +172,19 @@ info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-04T23:04:1
 info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-09T12:37:33.379Z"}
 info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-12T22:02:29.234Z"}
 info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-17T19:19:01.601Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-17T19:42:49.075Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-17T20:03:08.237Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-03-17T20:09:43.975Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-03-17T20:14:22.996Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-03-17T20:16:58.855Z"}
+info: Arquivo jobs.json limpo. {"timestamp":"2025-03-17T20:16:58.859Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-03-17T20:16:58.860Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-03-17T20:17:23.858Z"}
+info: Vagas encontradas: 292 {"timestamp":"2025-03-17T20:17:23.879Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-03-17T20:17:23.883Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-03-30T12:53:49.009Z"}
+info: Arquivo jobs.json limpo. {"timestamp":"2025-03-30T12:53:49.015Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-03-30T12:53:49.016Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-03-30T12:53:56.554Z"}
+info: Vagas encontradas: 332 {"timestamp":"2025-03-30T12:53:56.571Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-03-30T12:53:56.575Z"}
