@@ -65,12 +65,13 @@ async function atualizarVagas() {
 
         const jobs = await page.evaluate(() => {
             const jobElements = document.querySelectorAll("#anuncio-dest > div");
+            const today = new Date().toISOString(); // ← Aqui pegamos a data atual
             return Array.from(jobElements).map(jobEl => {
                 const title = jobEl.querySelector(".titulo-anuncio")?.innerText.trim() || "Título não disponível";
                 const descriptionElement = jobEl.querySelector('[style*="line-height:20px"]');
                 const description = descriptionElement?.innerText.trim() || "Descrição não disponível";
-
-                return { title, description };
+        
+                return { title, description, dateCollected: today }; // ← Inclui a data
             });
         });
 
@@ -122,16 +123,6 @@ const PORT = 8081;
 app.listen(PORT, async () => {
     logger.info(`Servidor rodando em http://localhost:${PORT}`);
 
-    // Apagar as vagas antigas
-    try {
-        if (fs.existsSync(JOBS_FILE)) {
-            fs.writeFileSync(JOBS_FILE, JSON.stringify([])); // Limpa o arquivo
-            logger.info("Arquivo jobs.json limpo.");
-        }
-    } catch (error) {
-        logger.error("Erro ao limpar jobs.json: " + error.message);
-    }
-
-    // Buscar novas vagas automaticamente
+    // Buscar novas vagas automaticamente (sem apagar antes)
     await atualizarVagas();
 });
