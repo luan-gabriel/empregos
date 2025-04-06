@@ -38,4 +38,23 @@ async function generateStatic() {
     }
 }
 
+function gerarMensagemWhatsApp(vagas) {
+    const hoje = new Date().toLocaleDateString('pt-BR');
+    let mensagem = `🆕 NOVAS VAGAS DISPONÍVEIS HOJE! (Franca/SP) 🚀\n\n`;
+  
+    vagas.slice(0, 5).forEach((vaga, index) => {
+      mensagem += `${index + 1}️⃣ *${vaga.title}*\n`;
+      if (vaga.location) mensagem += `📍 ${vaga.location}\n`;
+      if (vaga.contact) mensagem += `📞 ${vaga.contact}\n`;
+      if (vaga.email) mensagem += `📧 ${vaga.email}\n`;
+      mensagem += `📅 Publicado em: ${hoje}\n`;
+      mensagem += `🔗 ${vaga.link}\n\n`;
+    });
+  
+    mensagem += `📲 Para mais vagas acesse: https://016empregos.com.br\n\n`;
+    mensagem += `👀 Fique atento! As vagas são atualizadas diariamente!`;
+  
+    return mensagem;
+  }
+
 module.exports = generateStatic;
