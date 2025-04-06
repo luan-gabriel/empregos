@@ -56,14 +56,14 @@
                 const jobElement = document.createElement('div');
                 
                 // Aplicando fundo cinza claro e outras estilizações com Tailwind
-                jobElement.classList.add('bg-gray-600', 'rounded-xl', 'shadow-lg', 'p-6', 'transition-transform', 'transform', 'hover:scale-105', 'border', 'border-gray-200');
+                jobElement.classList.add('bg-gray-500', 'rounded-xl', 'shadow-lg', 'p-6', 'transition-transform', 'transform', 'hover:scale-105', 'border', 'border-gray-200');
                 
                 const title = document.createElement('h3');
-                title.classList.add('text-xl', 'font-semibold', 'text-blue-600', 'mb-3');
+                title.classList.add('text-xl', 'font-semibold', 'text-blue-300', 'mb-3');
                 title.textContent = job.title;
 
                 const description = document.createElement('p');
-                description.classList.add('text-gray-500', 'text-base', 'mb-4');
+                description.classList.add('text-gray-100', 'text-base', 'mb-4');
                 description.textContent = job.description;
 
                 jobElement.appendChild(title);
