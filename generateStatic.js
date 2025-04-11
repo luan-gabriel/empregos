@@ -22,12 +22,23 @@ async function generateStatic() {
         // Definir o caminho do arquivo HTML gerado
         const outputFilePath = path.join(OUTPUT_DIR, "index.html");
 
-        // Ler o template EJS
-        const templatePath = path.join(__dirname, "views", "index.ejs");
-        const template = fs.readFileSync(templatePath, "utf-8");
+        // Geração da página principal
+        const indexTemplatePath = path.join(__dirname, "views", "index.ejs");
+        const indexTemplate = fs.readFileSync(indexTemplatePath, "utf-8");
+        const indexHtml = ejs.render(indexTemplate, { jobs, baseUrl: "/" });
+        fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml);
+
+        // Geração da página de privacidade
+        const privTemplatePath = path.join(__dirname, "views", "privacidade.ejs");
+        const privTemplate = fs.readFileSync(privTemplatePath, "utf-8");
+        const privHtml = ejs.render(privTemplate, { baseUrl: "/" });
+        fs.writeFileSync(path.join(OUTPUT_DIR, "privacidade.ejs"), privHtml);
+
+       
+        
 
         // Renderizar o HTML com as vagas filtradas
-        const html = ejs.render(template, { jobs });
+        const html = ejs.render(template, { jobs, baseUrl: "/" });
 
         // Escrever o HTML no arquivo
         fs.writeFileSync(outputFilePath, html);
@@ -41,20 +52,20 @@ async function generateStatic() {
 function gerarMensagemWhatsApp(vagas) {
     const hoje = new Date().toLocaleDateString('pt-BR');
     let mensagem = `🆕 NOVAS VAGAS DISPONÍVEIS HOJE! (Franca/SP) 🚀\n\n`;
-  
+
     vagas.slice(0, 5).forEach((vaga, index) => {
-      mensagem += `${index + 1}️⃣ *${vaga.title}*\n`;
-      if (vaga.location) mensagem += `📍 ${vaga.location}\n`;
-      if (vaga.contact) mensagem += `📞 ${vaga.contact}\n`;
-      if (vaga.email) mensagem += `📧 ${vaga.email}\n`;
-      mensagem += `📅 Publicado em: ${hoje}\n`;
-      mensagem += `🔗 ${vaga.link}\n\n`;
+        mensagem += `${index + 1}️⃣ *${vaga.title}*\n`;
+        if (vaga.location) mensagem += `📍 ${vaga.location}\n`;
+        if (vaga.contact) mensagem += `📞 ${vaga.contact}\n`;
+        if (vaga.email) mensagem += `📧 ${vaga.email}\n`;
+        mensagem += `📅 Publicado em: ${hoje}\n`;
+        mensagem += `🔗 ${vaga.link}\n\n`;
     });
-  
+
     mensagem += `📲 Para mais vagas acesse: https://016empregos.com.br\n\n`;
     mensagem += `👀 Fique atento! As vagas são atualizadas diariamente!`;
-  
+
     return mensagem;
-  }
+}
 
 module.exports = generateStatic;

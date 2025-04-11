@@ -10,11 +10,21 @@
 </head>
 <body class="font-sans leading-normal tracking-normal">
     <header class="bg-blue-700 text-white py-6 shadow-lg">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-extrabold">Empregos em Franca</h1>
-            <p class="text-lg mt-2">Encontre as melhores vagas de emprego da sua região!</p>
+        <div class="container mx-auto flex justify-between items-center px-4">
+          <div>
+            <h1 class="text-4xl font-extrabold">016 Empregos em Franca</h1>
+            <p class="text-lg mt-1">Encontre as melhores vagas da sua região!</p>
+          </div>
+          <a href="<%= baseUrl %>sobre" class="bg-white text-blue-700 font-semibold px-5 py-2 rounded hover:bg-gray-200 transition">
+            Sobre
+          </a>
+          <a href="<%= baseUrl %>privacidade" class="bg-white text-blue-700 font-semibold px-5 py-2 rounded hover:bg-gray-200 transition">
+            Privacidade
+          </a>
+         
+          
         </div>
-    </header>
+      </header>
 
     <main class="container mx-auto my-10 p-5">
         <h2 class="text-3xl font-semibold text-gray-800 mb-6">Vagas Disponíveis</h2>
@@ -56,7 +66,6 @@
                 const jobElement = document.createElement('div');
                 
                 // Aplicando fundo cinza claro e outras estilizações com Tailwind
-                jobElement.classList.add('bg-gray-600', 'rounded-xl', 'shadow-lg', 'p-6', 'transition-transform', 'transform', 'hover:scale-105', 'border', 'border-gray-200');
                 
                 const title = document.createElement('h3');
                 title.classList.add('text-xl', 'font-semibold', 'text-blue-600', 'mb-3');
