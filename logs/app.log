@@ -207,3 +207,33 @@ info: Buscando vagas em minha região... {"timestamp":"2025-04-06T14:54:39.891Z"
 info: Página carregada com sucesso. {"timestamp":"2025-04-06T14:54:45.231Z"}
 info: Vagas encontradas: 302 {"timestamp":"2025-04-06T14:54:45.263Z"}
 info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-06T14:54:45.269Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-06T15:17:05.303Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-06T15:17:05.348Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-06T15:17:10.646Z"}
+info: Vagas encontradas: 302 {"timestamp":"2025-04-06T15:17:10.669Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-06T15:17:10.674Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-07T21:15:28.644Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-07T21:15:28.648Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-07T21:15:35.918Z"}
+info: Vagas encontradas: 298 {"timestamp":"2025-04-07T21:15:35.937Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-07T21:15:35.942Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-07T21:19:39.609Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-07T21:19:39.666Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-07T21:19:54.499Z"}
+info: Vagas encontradas: 298 {"timestamp":"2025-04-07T21:19:54.522Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-07T21:19:54.530Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-07T22:20:38.791Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-07T22:20:38.795Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-07T22:20:52.812Z"}
+info: Vagas encontradas: 298 {"timestamp":"2025-04-07T22:20:52.980Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-07T22:20:53.091Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-07T23:10:33.678Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-07T23:10:33.683Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-07T23:10:38.541Z"}
+info: Vagas encontradas: 300 {"timestamp":"2025-04-07T23:10:38.553Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-07T23:10:38.562Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-08T23:52:11.042Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-08T23:52:11.049Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-08T23:52:22.443Z"}
+info: Vagas encontradas: 320 {"timestamp":"2025-04-08T23:52:22.459Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-08T23:52:22.468Z"}
