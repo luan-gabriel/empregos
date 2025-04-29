@@ -247,3 +247,32 @@ info: Buscando vagas em minha região... {"timestamp":"2025-04-13T12:52:33.248Z"
 info: Página carregada com sucesso. {"timestamp":"2025-04-13T12:52:38.446Z"}
 info: Vagas encontradas: 320 {"timestamp":"2025-04-13T12:52:38.474Z"}
 info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-13T12:52:38.500Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-15T22:39:24.031Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-15T22:39:24.034Z"}
+error: Erro ao buscar vagas: net::ERR_CONNECTION_TIMED_OUT at https://hardfranca.com.br/anuncios.php {"timestamp":"2025-04-15T22:39:46.870Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-16T21:22:50.634Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-16T21:22:50.638Z"}
+error: Erro ao buscar vagas: net::ERR_CONNECTION_TIMED_OUT at https://hardfranca.com.br/anuncios.php {"timestamp":"2025-04-16T21:23:14.565Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-16T21:23:47.443Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-16T21:23:47.447Z"}
+error: Erro ao buscar vagas: net::ERR_CONNECTION_TIMED_OUT at https://hardfranca.com.br/anuncios.php {"timestamp":"2025-04-16T21:24:10.584Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-22T21:36:27.169Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-22T21:36:27.174Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-22T21:36:33.127Z"}
+info: Vagas encontradas: 296 {"timestamp":"2025-04-22T21:36:33.157Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-22T21:36:33.167Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-22T21:42:49.292Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-22T21:42:49.296Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-22T21:42:54.911Z"}
+info: Vagas encontradas: 296 {"timestamp":"2025-04-22T21:42:54.949Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-22T21:42:54.960Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-29T21:28:09.799Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-29T21:28:09.805Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-29T21:28:13.991Z"}
+info: Vagas encontradas: 330 {"timestamp":"2025-04-29T21:28:14.031Z"}
+info: Vagas atualizadas com sucesso! {"timestamp":"2025-04-29T21:28:14.050Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-04-29T21:33:06.772Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-04-29T21:33:06.776Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-04-29T21:33:11.081Z"}
+info: Vagas encontradas: 330 {"timestamp":"2025-04-29T21:33:11.101Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-04-29T21:33:11.103Z"}
