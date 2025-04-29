@@ -4,44 +4,29 @@ const ejs = require("ejs");
 const JOBS_FILE = path.join(__dirname, "jobs.json");
 const OUTPUT_DIR = path.join(__dirname, "public");
 
-// Função para gerar o HTML estático
 async function generateStatic() {
     try {
         console.log("Gerando HTML estático...");
 
-        // Ler o arquivo jobs.json
         let jobs = [];
         if (fs.existsSync(JOBS_FILE)) {
             const data = fs.readFileSync(JOBS_FILE, "utf-8");
             jobs = JSON.parse(data);
         }
 
-        // Filtrar as vagas com a descrição "Descrição não disponível"
         jobs = jobs.filter(job => job.description !== "Descrição não disponível");
 
-        // Definir o caminho do arquivo HTML gerado
-        const outputFilePath = path.join(OUTPUT_DIR, "index.html");
-
-        // Geração da página principal
+        // Página principal
         const indexTemplatePath = path.join(__dirname, "views", "index.ejs");
         const indexTemplate = fs.readFileSync(indexTemplatePath, "utf-8");
         const indexHtml = ejs.render(indexTemplate, { jobs, baseUrl: "/" });
         fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml);
 
-        // Geração da página de privacidade
+        // Página de privacidade
         const privTemplatePath = path.join(__dirname, "views", "privacidade.ejs");
         const privTemplate = fs.readFileSync(privTemplatePath, "utf-8");
         const privHtml = ejs.render(privTemplate, { baseUrl: "/" });
         fs.writeFileSync(path.join(OUTPUT_DIR, "privacidade.ejs"), privHtml);
-
-       
-        
-
-        // Renderizar o HTML com as vagas filtradas
-        const html = ejs.render(template, { jobs, baseUrl: "/" });
-
-        // Escrever o HTML no arquivo
-        fs.writeFileSync(outputFilePath, html);
 
         console.log("HTML gerado com sucesso!");
     } catch (error) {

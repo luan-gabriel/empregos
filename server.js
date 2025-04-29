@@ -7,7 +7,6 @@ const cron = require("node-cron");
 const generateStatic = require("./generateStatic");
 
 const app = express();
-
 const JOBS_FILE = path.join(__dirname, "jobs.json");
 
 // Logger
@@ -28,7 +27,6 @@ const logger = winston.createLogger({
 // Configurações
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Página inicial
@@ -51,11 +49,12 @@ app.get("/sobre", (req, res) => {
   res.render("sobre");
 });
 
-app.get('/privacidade', (req, res) => {
-    res.render('privacidade');
-  });
+// Página Privacidade
+app.get("/privacidade", (req, res) => {
+  res.render("privacidade");
+});
 
-// Função de scraping
+// Função de scraping que substitui as vagas antigas por novas
 async function atualizarVagas() {
   try {
     logger.info("Buscando vagas em minha região...");
@@ -84,26 +83,13 @@ async function atualizarVagas() {
     logger.info(`Vagas encontradas: ${jobs.length}`);
 
     if (jobs.length > 0) {
-      const filteredJobs = jobs.filter((job) => job.description !== "Descrição não disponível");
+      const filteredJobs = jobs.filter(job => job.description !== "Descrição não disponível");
 
-      let existingJobs = [];
-      try {
-        if (fs.existsSync(JOBS_FILE)) {
-          const data = fs.readFileSync(JOBS_FILE, "utf-8");
-          existingJobs = JSON.parse(data);
-        }
-      } catch (error) {
-        logger.error("Erro ao ler o arquivo jobs.json: " + error.message);
-      }
+      // Salva somente as vagas novas, sobrescrevendo o arquivo
+      fs.writeFileSync(JOBS_FILE, JSON.stringify(filteredJobs, null, 2));
+      logger.info("Vagas salvas com sucesso (substituindo as anteriores).");
 
-      const updatedJobs = [...existingJobs, ...filteredJobs].filter(
-        (job, index, self) => index === self.findIndex((t) => t.title === job.title)
-      );
-
-      fs.writeFileSync(JOBS_FILE, JSON.stringify(updatedJobs, null, 2));
-      logger.info("Vagas atualizadas com sucesso!");
-
-      generateStatic(); // Gerar versão estática
+      generateStatic(); // Gera HTML estático com as novas vagas
     } else {
       logger.warn("Nenhuma vaga encontrada.");
     }
@@ -114,7 +100,7 @@ async function atualizarVagas() {
   }
 }
 
-// Agendamento diário
+// Agendamento automático diário
 cron.schedule(
   "0 9 * * *",
   () => {
@@ -126,9 +112,9 @@ cron.schedule(
   }
 );
 
-// Iniciar servidor
+// Inicia o servidor e executa scraping ao iniciar
 const PORT = 8081;
 app.listen(PORT, async () => {
   logger.info(`Servidor rodando em http://localhost:${PORT}`);
-  await atualizarVagas();
+  await atualizarVagas(); // Executa o scraping ao iniciar
 });
