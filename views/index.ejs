@@ -65,33 +65,43 @@
 
         // Função para exibir as vagas filtradas
         function displayJobs(filteredJobs) {
-            const resultsContainer = document.getElementById('search-results');
-            resultsContainer.innerHTML = ''; // Limpar resultados anteriores
+    const resultsContainer = document.getElementById('search-results');
+    resultsContainer.innerHTML = ''; // Limpar resultados anteriores
 
-            if (filteredJobs.length === 0) {
-                resultsContainer.innerHTML = '<p class="text-gray-600">Nenhuma vaga encontrada.</p>';
-                return;
-            }
+    if (filteredJobs.length === 0) {
+        resultsContainer.innerHTML = '<p class="text-gray-600">Nenhuma vaga encontrada.</p>';
+        return;
+    }
 
-            filteredJobs.forEach(job => {
-                const jobElement = document.createElement('div');
-                
-                // Aplicando fundo cinza claro e outras estilizações com Tailwind
-                
-                const title = document.createElement('h3');
-                title.classList.add('text-xl', 'font-semibold', 'text-blue-600', 'mb-3');
-                title.textContent = job.title;
+    filteredJobs.forEach(job => {
+        const jobElement = document.createElement('div');
+        jobElement.classList.add('bg-gray-100', 'rounded-xl', 'shadow-lg', 'p-6', 'transition-transform', 'transform', 'hover:scale-105', 'border', 'border-gray-200');
 
-                const description = document.createElement('p');
-                description.classList.add('text-gray-500', 'text-base', 'mb-4');
-                description.textContent = job.description;
+        const title = document.createElement('h3');
+        title.classList.add('text-xl', 'font-semibold', 'text-blue-600', 'mb-3');
+        title.textContent = job.title;
 
-                jobElement.appendChild(title);
-                jobElement.appendChild(description);
+        const description = document.createElement('p');
+        description.classList.add('text-gray-500', 'text-base', 'mb-4');
 
-                resultsContainer.appendChild(jobElement);
-            });
-        }
+        // ✨ Detecta e transforma e-mails e telefones em links
+        let formatted = job.description
+            .replace(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/g, '<a href="mailto:$1" class="text-blue-500 underline">$1</a>')
+            .replace(/(\(?\d{2}\)?\s?\d{4,5}-\d{4})/g, '<a href="https://wa.me/55$1" class="text-green-600 underline" target="_blank">$1</a>');
+
+        // Remover caracteres não numéricos para o link do WhatsApp
+        formatted = formatted.replace(/href="https:\/\/wa\.me\/55\(?(\d{2})\)?\s?(\d{4,5})-(\d{4})"/g, (match, ddd, parte1, parte2) => {
+            return `href="https://wa.me/55${ddd}${parte1}${parte2}"`;
+        });
+
+        description.innerHTML = formatted;
+
+        jobElement.appendChild(title);
+        jobElement.appendChild(description);
+
+        resultsContainer.appendChild(jobElement);
+    });
+}
 
         // Função de filtro por palavra-chave (somente pelo título da vaga)
         function filterJobs(query) {

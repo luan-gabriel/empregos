@@ -35,7 +35,8 @@ async function start(client) {
 
   // Introdução personalizada
   const introducao =
-    '📲 Para TODAS as vagas acesse: https://zero16-empregos.onrender.com\n' +
+    '📲 Para TODAS as vagas acesse: https://zero16-empregos.onrender.com\n' + 
+    'SUA EMPRESA ESTA CONTRATANDO👀????   ENTRE EM CONTATO COM O ADM DO GRUPO 📲📞' +
     '👀 Fique atento! As vagas são atualizadas diariamente!\n' +
     '🆕 *5 VAGAS ADICIONADAS RECENTEMENTE:*\n\n';
 
