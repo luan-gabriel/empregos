@@ -501,3 +501,13 @@ info: Buscando vagas em minha região... {"timestamp":"2025-08-06T13:46:39.654Z"
 info: Página carregada com sucesso. {"timestamp":"2025-08-06T13:46:44.472Z"}
 info: Vagas encontradas: 364 {"timestamp":"2025-08-06T13:46:44.513Z"}
 info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-08-06T13:46:44.516Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-08-06T14:47:11.074Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-08-06T14:47:11.078Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-08-06T14:47:16.290Z"}
+info: Vagas encontradas: 364 {"timestamp":"2025-08-06T14:47:16.330Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-08-06T14:47:16.334Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-08-06T14:49:08.141Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-08-06T14:49:08.145Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-08-06T14:49:13.113Z"}
+info: Vagas encontradas: 364 {"timestamp":"2025-08-06T14:49:13.161Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-08-06T14:49:13.164Z"}
