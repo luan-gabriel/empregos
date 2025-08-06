@@ -50,7 +50,7 @@ venom
     client
       .sendText("5516991242066@c.us", mensagem)
       .then(() => {
-        console.log("✅ Mensagem enviada com sucesso!");
+        console.log("✅ Mensagem enviada com sucesso!!");
       })
       .catch((error) => {
         console.error("❌ Erro ao enviar mensagem:", error);
