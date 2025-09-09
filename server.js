@@ -24,10 +24,12 @@ const logger = winston.createLogger({
   ],
 });
 
-// Configurações
+// Configurações do Express
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
+
+// Servir arquivos estáticos mantendo /public nos links
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // Página inicial
 app.get("/", (req, res) => {
