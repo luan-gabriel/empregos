@@ -48,7 +48,7 @@ venom
     const mensagem = gerarMensagem();
 
     client
-      .sendText("5516991242066@c.us", mensagem)
+      .sendText("55016991242066@c.us", mensagem)
       .then(() => {
         console.log("✅ Mensagem enviada com sucesso!!");
       })
