@@ -46,15 +46,7 @@ app.get("/", (req, res) => {
   res.render("index", { jobs });
 });
 
-// Página Sobre
-app.get("/sobre", (req, res) => {
-  res.render("sobre");
-});
 
-// Página Privacidade
-app.get("/privacidade", (req, res) => {
-  res.render("privacidade");
-});
 
 // Função de scraping que substitui as vagas antigas por novas
 async function atualizarVagas() {

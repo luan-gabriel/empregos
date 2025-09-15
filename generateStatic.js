@@ -22,11 +22,8 @@ async function generateStatic() {
         const indexHtml = ejs.render(indexTemplate, { jobs, baseUrl: "/" });
         fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml);
 
-        // Página de privacidade
-        const privTemplatePath = path.join(__dirname, "views", "privacidade.ejs");
-        const privTemplate = fs.readFileSync(privTemplatePath, "utf-8");
-        const privHtml = ejs.render(privTemplate, { baseUrl: "/" });
-        fs.writeFileSync(path.join(OUTPUT_DIR, "privacidade.ejs"), privHtml);
+      
+       
 
         console.log("HTML gerado com sucesso!");
     } catch (error) {
