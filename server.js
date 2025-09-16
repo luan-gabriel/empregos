@@ -28,8 +28,23 @@ const logger = winston.createLogger({
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-// Servir arquivos estáticos mantendo /public nos links
-app.use('/public', express.static(path.join(__dirname, 'public')));
+
+
+// Servir arquivos estáticos mantendo /public nos links e corrigindo MIME
+app.use(
+  "/public",
+  express.static(path.join(__dirname, "public"), {
+    setHeaders: (res, filePath) => {
+      if (filePath.endsWith(".css")) {
+        res.setHeader("Content-Type", "text/css");
+      }
+      if (filePath.endsWith(".js")) {
+        res.setHeader("Content-Type", "application/javascript");
+      }
+    },
+  })
+);
+
 
 // Página inicial
 app.get("/", (req, res) => {
