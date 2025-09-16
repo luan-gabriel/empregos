@@ -51,8 +51,7 @@
 
 .brutalist-input:focus {
   animation: focus-pulse 4s cubic-bezier(0.25, 0.8, 0.25, 1) infinite;
-  /* Removido o glitch daqui 👇 */
-  /* animation: focus-pulse 4s ... , glitch ...; */
+
 }
 
 @keyframes focus-pulse {
@@ -64,7 +63,7 @@
   }
 }
 
-/* Removido glitch e glitch-slice pois não são mais usados */
+
 
 @media (max-width: 768px) {
   .brutalist-input {
