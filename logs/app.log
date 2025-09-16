@@ -582,3 +582,8 @@ info: Buscando vagas em minha região... {"timestamp":"2025-09-15T17:53:07.346Z"
 info: Página carregada com sucesso. {"timestamp":"2025-09-15T17:53:13.371Z"}
 info: Vagas encontradas: 416 {"timestamp":"2025-09-15T17:53:13.399Z"}
 info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-09-15T17:53:13.402Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-09-16T15:35:48.620Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-09-16T15:35:48.624Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-09-16T15:35:54.412Z"}
+info: Vagas encontradas: 436 {"timestamp":"2025-09-16T15:35:54.437Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-09-16T15:35:54.441Z"}
