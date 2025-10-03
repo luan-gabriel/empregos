@@ -632,3 +632,19 @@ info: Buscando vagas em minha região... {"timestamp":"2025-10-02T17:15:28.552Z"
 info: Página carregada com sucesso. {"timestamp":"2025-10-02T17:15:33.756Z"}
 info: Vagas encontradas: 352 {"timestamp":"2025-10-02T17:15:33.792Z"}
 info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-02T17:15:33.794Z"}
+info: Servidor rodando em http://localhost:8080 {"timestamp":"2025-10-02T19:26:46.929Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-02T19:26:46.931Z"}
+error: Erro ao buscar vagas: Failed to launch the browser process!
+/home/ubuntu/.cache/puppeteer/chrome/linux-133.0.6943.53/chrome-linux64/chrome: error while loading shared libraries: libasound.so.2: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+ {"timestamp":"2025-10-02T19:26:46.973Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-03T12:00:00.662Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-03T12:00:00.663Z"}
+error: Erro ao buscar vagas: Failed to launch the browser process!
+/home/ubuntu/.cache/puppeteer/chrome/linux-133.0.6943.53/chrome-linux64/chrome: error while loading shared libraries: libasound.so.2: cannot open shared object file: No such file or directory
+
+
+TROUBLESHOOTING: https://pptr.dev/troubleshooting
+ {"timestamp":"2025-10-03T12:00:00.671Z"}
