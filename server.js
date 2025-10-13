@@ -122,8 +122,8 @@ cron.schedule(
 );
 
 // Inicia o servidor e executa scraping ao iniciar
-const PORT = 8080;
-app.listen(PORT, async () => {
-  logger.info(`Servidor rodando em http://localhost:${PORT}`);
-  await atualizarVagas(); // Executa o scraping ao iniciar
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
 });
