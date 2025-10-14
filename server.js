@@ -9,6 +9,12 @@ const generateStatic = require("./generateStatic");
 const app = express();
 const JOBS_FILE = path.join(__dirname, "jobs.json");
 
+
+let jobsData = [];
+
+
+
+
 // Logger
 const logger = winston.createLogger({
   level: "info",
@@ -109,21 +115,11 @@ async function atualizarVagas() {
   }
 }
 
-// Agendamento automático diário
-cron.schedule(
-  "0 9 * * *",
-  () => {
-    logger.info("Executando atualização diária de vagas...");
-    atualizarVagas();
-  },
-  {
-    timezone: "America/Sao_Paulo",
-  }
-);
+
 
 // Inicia o servidor e executa scraping ao iniciar
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+const PORT = 8081;
+app.listen(PORT, async () => {
+  logger.info(`Servidor rodando em http://localhost:${PORT}`);
+  await atualizarVagas(); // Executa o scraping ao iniciar
 });
