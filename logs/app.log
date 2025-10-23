@@ -801,3 +801,48 @@ info: Buscando vagas em minha região... {"timestamp":"2025-10-16T11:52:23.428Z"
 info: Página carregada com sucesso. {"timestamp":"2025-10-16T11:52:26.467Z"}
 info: Vagas encontradas: 446 {"timestamp":"2025-10-16T11:52:26.482Z"}
 info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-16T11:52:26.484Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-16T12:00:00.224Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-16T12:00:00.224Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-16T12:00:04.877Z"}
+info: Vagas encontradas: 446 {"timestamp":"2025-10-16T12:00:04.891Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-16T12:00:04.892Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-17T12:00:00.063Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-17T12:00:00.063Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-17T12:00:03.823Z"}
+info: Vagas encontradas: 448 {"timestamp":"2025-10-17T12:00:03.839Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-17T12:00:03.840Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-18T12:00:00.853Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-18T12:00:00.854Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-18T12:00:06.650Z"}
+info: Vagas encontradas: 438 {"timestamp":"2025-10-18T12:00:06.663Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-18T12:00:06.664Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-19T12:00:00.827Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-19T12:00:00.827Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-19T12:00:07.561Z"}
+info: Vagas encontradas: 418 {"timestamp":"2025-10-19T12:00:07.576Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-19T12:00:07.577Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-20T12:00:00.667Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-20T12:00:00.667Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-20T12:00:04.388Z"}
+info: Vagas encontradas: 414 {"timestamp":"2025-10-20T12:00:04.402Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-20T12:00:04.404Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-21T12:00:00.623Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-21T12:00:00.623Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-21T12:00:05.282Z"}
+info: Vagas encontradas: 422 {"timestamp":"2025-10-21T12:00:05.297Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-21T12:00:05.298Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-22T12:00:00.570Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-22T12:00:00.571Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-22T12:00:05.042Z"}
+info: Vagas encontradas: 420 {"timestamp":"2025-10-22T12:00:05.057Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-22T12:00:05.058Z"}
+info: Executando atualização diária de vagas... {"timestamp":"2025-10-23T12:00:00.521Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-23T12:00:00.522Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-23T12:00:03.836Z"}
+info: Vagas encontradas: 428 {"timestamp":"2025-10-23T12:00:03.852Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-23T12:00:03.853Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-10-23T12:27:09.715Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-10-23T12:27:09.718Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-10-23T12:27:12.372Z"}
+info: Vagas encontradas: 432 {"timestamp":"2025-10-23T12:27:12.388Z"}
+info: Vagas salvas com sucesso (substituindo as anteriores). {"timestamp":"2025-10-23T12:27:12.391Z"}
