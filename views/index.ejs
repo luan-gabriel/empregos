@@ -25,7 +25,7 @@
   <!-- HEADER -->
  <header class="bg-white border-b sticky top-0 z-50">
   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center gap-3">
+    <a href="#" class="flex items-center gap-3">
       <!-- Logo -->
       <img src="/016empregos.jpg" alt="016 Empregos Franca" class="w-10 h-10 rounded-full object-cover">
 
@@ -182,62 +182,56 @@
   const resultsEl = document.getElementById('search-results');
   const manualEl = document.getElementById('manual-jobs');
 
-  function createJobCard(job, isManual=false) {
-    const card = document.createElement('article');
-    card.className = 'bg-white rounded-lg shadow p-4 border';
+  function createJobCard(job, isManual = false) {
+  const card = document.createElement('article');
+  card.className = 'bg-white rounded-lg shadow p-4 border';
 
-    // top: title + date
-    const top = document.createElement('div');
-    top.className = 'flex justify-between items-start gap-2';
+  // título
+  const top = document.createElement('div');
+  top.className = 'flex items-start gap-2'; // removi justify-between porque não tem data
 
-    const title = document.createElement('h3');
-    title.className = 'text-lg font-semibold text-gray-800';
-    title.textContent = job.title;
+  const title = document.createElement('h3');
+  title.className = 'text-lg font-semibold text-gray-800';
+  title.textContent = job.title;
 
-    const date = document.createElement('time');
-    date.className = 'text-xs text-gray-500';
-    date.textContent = formatDate(job.dateCollected || job.date || '');
+  top.appendChild(title);
+  card.appendChild(top);
 
-    top.appendChild(title);
-    top.appendChild(date);
+  // description
+  const desc = document.createElement('p');
+  desc.className = 'text-sm text-gray-600 mt-2';
+  const short = (job.description || '').replace(/\n/g, ' ').slice(0, 250);
+  desc.innerHTML = linkify(short + ((job.description || '').length > 250 ? '...' : ''));
+  card.appendChild(desc);
 
-    // descrição completa (sem truncar)
-    const desc = document.createElement('p');
-    desc.className = 'text-sm text-gray-600 mt-2 whitespace-pre-line';
-    desc.innerHTML = linkify(job.description || '');
+  // tags
+  const tagsWrap = document.createElement('div');
+  tagsWrap.className = 'mt-3 flex flex-wrap gap-2';
+  const tags = generateTagsFromTitle(job.title);
+  tags.slice(0, 4).forEach(t => {
+    const tEl = document.createElement('span');
+    tEl.className = 'text-xs px-2 py-1 rounded-full bg-gray-100 border text-gray-700';
+    tEl.textContent = t;
+    tagsWrap.appendChild(tEl);
+  });
+  card.appendChild(tagsWrap);
 
-    // tags extraídas do título
-    const tagsWrap = document.createElement('div');
-    tagsWrap.className = 'mt-3 flex flex-wrap gap-2';
-    const tags = generateTagsFromTitle(job.title);
-    tags.slice(0,4).forEach(t => {
-      const tEl = document.createElement('span');
-      tEl.className = 'text-xs px-2 py-1 rounded-full bg-gray-100 border text-gray-700';
-      tEl.textContent = t;
-      tagsWrap.appendChild(tEl);
-    });
-
-    // ações
-    const actions = document.createElement('div');
-    actions.className = 'mt-4 flex gap-2';
-
-    // botão WhatsApp (se achar telefone no texto)
-    const phone = extractPhone(job.description || '');
-    if (phone) {
-      const wa = document.createElement('a');
-      wa.href = `https://wa.me/55${phone.replace(/\D/g,'')}`;
-      wa.target = '_blank';
-      wa.className = 'px-3 py-2 rounded bg-green-600 text-white text-sm';
-      wa.textContent = 'Candidatar (WhatsApp)';
-      actions.appendChild(wa);
-    }
-
-    card.appendChild(top);
-    card.appendChild(desc);
-    card.appendChild(tagsWrap);
-    card.appendChild(actions);
-    return card;
+  // actions
+  const actions = document.createElement('div');
+  actions.className = 'mt-4 flex gap-2';
+  const phone = extractPhone(job.description || '');
+  if (phone) {
+    const wa = document.createElement('a');
+    wa.href = `https://wa.me/55${phone.replace(/\D/g, '')}`;
+    wa.target = '_blank';
+    wa.className = 'px-3 py-2 rounded bg-green-600 text-white text-sm';
+    wa.textContent = 'Candidatar (WhatsApp)';
+    actions.appendChild(wa);
   }
+  if (actions.children.length) card.appendChild(actions);
+
+  return card;
+}
 
   // renderização
   function renderResults(list) {
