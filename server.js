@@ -117,6 +117,26 @@ async function atualizarVagas() {
 
 
 
+// Rota para servir o jobs.json
+app.get("/jobs.json", (req, res) => {
+    const jobsFilePath = path.join(__dirname, "jobs.json");
+
+    fs.readFile(jobsFilePath, "utf8", (err, data) => {
+        if (err) {
+            console.error("Erro ao ler jobs.json:", err);
+            return res.status(500).json({ error: "Não foi possível ler jobs.json" });
+        }
+
+        try {
+            const jobs = JSON.parse(data); // garante que o JSON está válido
+            res.json(jobs);
+        } catch (parseErr) {
+            console.error("Erro ao parsear jobs.json:", parseErr);
+            res.status(500).json({ error: "JSON inválido" });
+        }
+    });
+});
+
 // Inicia o servidor e executa scraping ao iniciar
 const PORT = 8081;
 app.listen(PORT, async () => {
