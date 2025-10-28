@@ -2,8 +2,9 @@ const fs = require("fs");
 const path = require("path");
 const ejs = require("ejs");
 
-const JOBS_FILE = path.join(__dirname, "jobs.json");
-const OUTPUT_DIR = path.join(__dirname, "public");
+// --- Caminhos ---
+const JOBS_FILE = path.join(__dirname, "public", "jobs.json"); // agora dentro de public
+const OUTPUT_DIR = path.join(__dirname, "public"); // pasta de saída do HTML
 
 async function generateStatic() {
   try {
@@ -11,38 +12,33 @@ async function generateStatic() {
 
     let jobs = [];
 
-    // Lê os três arquivos de vagas
-    const autoJobs = fs.existsSync(JOBS_FILE)
-      ? JSON.parse(fs.readFileSync(JOBS_FILE, "utf-8")).map(j => ({ ...j, type: "auto" }))
-      : [];
+    // Lê jobs.json gerado pelo server.js
+    if (fs.existsSync(JOBS_FILE)) {
+      jobs = JSON.parse(fs.readFileSync(JOBS_FILE, "utf-8"));
+    }
 
-
-
-    // Mostra no console quantas vagas foram carregadas de cada tipo
-    console.log(`✅ Vagas automáticas: ${autoJobs.length}`);
-   
-
-    
-
-    // Remove vagas sem descrição
+    // Remove vagas sem descrição válida
     jobs = jobs.filter(job => job.description && job.description !== "Descrição não disponível");
 
-    // Caminho do template e renderização
+    console.log(`✅ Total de vagas válidas: ${jobs.length}`);
+
+    // Caminho do template EJS
     const indexTemplatePath = path.join(__dirname, "views", "index.ejs");
     const indexTemplate = fs.readFileSync(indexTemplatePath, "utf-8");
 
+    // Renderiza o HTML
     const indexHtml = ejs.render(indexTemplate, { jobs, baseUrl: "/" });
 
     // Gera o arquivo estático
-    fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml);
+    fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml, "utf-8");
 
-    console.log("✅ HTML gerado com sucesso!");
+    console.log("✅ HTML gerado com sucesso em /public!");
   } catch (error) {
     console.error("❌ Erro ao gerar o HTML:", error);
   }
 }
 
-// Função extra (mantida)
+// Função extra para WhatsApp (mantida)
 function gerarMensagemWhatsApp(vagas) {
   const hoje = new Date().toLocaleDateString('pt-BR');
   let mensagem = `🆕 NOVAS VAGAS DISPONÍVEIS HOJE! (Franca/SP) 🚀\n\n`;

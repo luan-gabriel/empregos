@@ -21,6 +21,11 @@
         .custom-scroll::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
+
+        /* Evita rolagem dupla quando menu aberto */
+        body.menu-open {
+            overflow: hidden;
+        }
     </style>
 </head>
 
@@ -30,26 +35,68 @@
     <header class="bg-white border-b sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3">
-                <!-- Logo -->
-                <img src="/016empregos.jpg" alt="016 Empregos Franca" class="w-10 h-10 rounded-full object-cover">
-
+                <img src="/public/016empregos.jpg" alt="016 Empregos Franca"
+                    class="w-10 h-10 rounded-full object-cover">
                 <div>
                     <div class="text-lg font-semibold">016 Empregos Franca</div>
                     <div class="text-sm text-gray-500">Conectando talentos e oportunidades</div>
                 </div>
             </a>
 
-            <div class="flex items-center gap-3">
+            <!-- Botão hambúrguer -->
+            <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none">
+                ☰
+            </button>
+
+            <!-- Botões desktop -->
+            <div class="hidden lg:flex items-center gap-3">
                 <a href="planos.html"
                     class="px-4 py-2 rounded-md bg-green-600 hover:bg-green-700 text-white flex items-center gap-2">
-                    💼 <span class="hidden sm:inline">Anunciar</span>
+                    💼 <span>Anunciar</span>
                 </a>
 
                 <a href="https://chat.whatsapp.com/FejC0MSgfOt6FlH9RSLVCs" target="_blank"
                     class="px-4 py-2 rounded-md border border-green-600 text-green-700 hover:bg-green-50 flex items-center gap-2">
-                    💬 <span class="hidden sm:inline">Entrar no Grupo</span>
+                    💬 <span>Entrar no Grupo</span>
                 </a>
             </div>
+        </div>
+
+        <!-- MENU MOBILE -->
+        <div id="mobile-menu"
+            class="hidden fixed inset-0 bg-white z-40 p-5 overflow-y-auto transition-all duration-300 lg:hidden">
+            <div class="flex justify-between items-center mb-5">
+                <h2 class="text-lg font-semibold">Menu</h2>
+                <button id="close-menu" class="text-2xl">✖</button>
+            </div>
+
+            <a href="planos.html"
+                class="block px-4 py-3 rounded-md bg-green-600 hover:bg-green-700 text-white mb-3 text-center">
+                💼 Anunciar
+            </a>
+            <a href="https://chat.whatsapp.com/FejC0MSgfOt6FlH9RSLVCs" target="_blank"
+                class="block px-4 py-3 rounded-md border border-green-600 text-green-700 hover:bg-green-50 mb-6 text-center">
+                💬 Entrar no Grupo
+            </a>
+
+             <h4 class="text-white font-semibold mb-3">Contato</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>📍 Franca - SP</li>
+                    <li>📧 <a href="mailto:contato@empregosemfranca.com"
+                            class="hover:text-white">contato@empregosemfranca.com</a></li>
+                    <li>📱 <a href="https://wa.me/55016991242066" class="hover:text-white">WhatsApp: (16) 99124-2066</a>
+                    </li>
+
+                    <ul class="space-y-2 text-sm">
+                    <li><a href="sobre.html" class="hover:text-white">Sobre Nós</a></li>
+                    <li><a href="planos.html" class="hover:text-white">Anuncie Conosco</a></li>
+                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
+                    <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
+                </ul>
+                </ul>
+
+            <hr class="my-4" />
+            
         </div>
     </header>
 
@@ -73,17 +120,18 @@
 
     <!-- CONTEÚDO PRINCIPAL -->
     <main class="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <!-- SIDEBAR -->
+        <!-- SIDEBAR: Filtros de Cargos -->
         <aside class="lg:col-span-1">
-            <div class="bg-white rounded-lg shadow p-4 sticky top-6">
-                <h3 class="font-semibold mb-4 text-lg flex items-center gap-2">
-                    <span class="text-blue-600 text-xl">🎯</span> Filtrar por cargo
+            <div class="bg-white rounded-xl shadow-lg p-6 sticky top-6">
+                <h3 class="font-semibold mb-4 text-lg flex items-center gap-2 text-blue-600">
+                    🎯 Filtrar por cargo
                 </h3>
 
-                <!-- novo container -->
-                <div id="tag-filter-box" class="space-y-2 max-h-[420px] overflow-y-auto pr-1 custom-scroll"></div>
+                <div id="tag-filter-box" class="space-y-3 max-h-[420px] overflow-y-auto pr-2 custom-scroll">
+                    <!-- checkboxes serão gerados dinamicamente aqui -->
+                </div>
 
-                <hr class="my-5" />
+                <hr class="my-5 border-gray-200" />
 
                 <div>
                     <h4 class="font-medium text-sm mb-2 text-gray-700">Ordenar por</h4>
@@ -107,10 +155,9 @@
         </section>
     </main>
 
-    <!-- RODAPÉ MODERNO -->
+    <!-- RODAPÉ -->
     <footer class="bg-gray-900 text-gray-300 mt-10 pt-10">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-
             <div>
                 <h3 class="text-white font-semibold text-lg mb-3">016 Empregos Franca</h3>
                 <p class="text-sm leading-relaxed">
@@ -118,7 +165,6 @@
                     Seu portal gratuito de vagas atualizado diariamente.
                 </p>
             </div>
-
             <div>
                 <h4 class="text-white font-semibold mb-3">Institucional</h4>
                 <ul class="space-y-2 text-sm">
@@ -128,7 +174,6 @@
                     <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-semibold mb-3">Categorias Populares</h4>
                 <ul class="space-y-2 text-sm">
@@ -138,7 +183,6 @@
                     <li>Serviços Gerais</li>
                 </ul>
             </div>
-
             <div>
                 <h4 class="text-white font-semibold mb-3">Contato</h4>
                 <ul class="space-y-2 text-sm">
@@ -149,23 +193,44 @@
                     </li>
                 </ul>
             </div>
-
         </div>
-
         <div class="border-t border-gray-800 mt-10 py-4 text-center text-sm text-gray-500">
             © 2025 016 Empregos Franca — Todos os direitos reservados.
         </div>
     </footer>
 
-
-   
     <script>
-      
+        // MENU MOBILE
+        const menuBtn = document.getElementById('menu-btn');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.classList.add('menu-open');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.classList.remove('menu-open');
+        });
+
+        // Copia filtros para menu mobile
+        function syncFilters() {
+            const tags = document.getElementById('tag-filter-box');
+            const mobileTags = document.getElementById('mobile-tag-filter');
+            if (tags && mobileTags) {
+                mobileTags.innerHTML = tags.innerHTML;
+            }
+        }
+
+        // Seu script original de vagas
         async function loadJobs() {
             try {
-                const response = await fetch('/jobs.json');
+                const response = await fetch('public/jobs.json');
                 const jobs = await response.json();
                 initializeJobs(jobs);
+                syncFilters();
             } catch (err) {
                 console.error('Erro ao carregar jobs.json:', err);
             }

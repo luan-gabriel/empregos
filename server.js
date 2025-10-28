@@ -3,19 +3,13 @@ const puppeteer = require("puppeteer");
 const fs = require("fs");
 const path = require("path");
 const winston = require("winston");
-const cron = require("node-cron");
-const generateStatic = require("./generateStatic");
-
+const generateStatic = require("./generateStatic"); // seu generateStatic.js
 const app = express();
-const JOBS_FILE = path.join(__dirname, "jobs.json");
 
+// --- Caminhos ---
+const JOBS_FILE = path.join(__dirname, "public", "jobs.json");
 
-let jobsData = [];
-
-
-
-
-// Logger
+// --- Logger ---
 const logger = winston.createLogger({
   level: "info",
   format: winston.format.combine(
@@ -30,29 +24,22 @@ const logger = winston.createLogger({
   ],
 });
 
-// Configurações do Express
+// --- Configurações do Express ---
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-
-
-// Servir arquivos estáticos mantendo /public nos links e corrigindo MIME
+// --- Servir arquivos estáticos ---
 app.use(
   "/public",
   express.static(path.join(__dirname, "public"), {
     setHeaders: (res, filePath) => {
-      if (filePath.endsWith(".css")) {
-        res.setHeader("Content-Type", "text/css");
-      }
-      if (filePath.endsWith(".js")) {
-        res.setHeader("Content-Type", "application/javascript");
-      }
+      if (filePath.endsWith(".css")) res.setHeader("Content-Type", "text/css");
+      if (filePath.endsWith(".js")) res.setHeader("Content-Type", "application/javascript");
     },
   })
 );
 
-
-// Página inicial
+// --- Página inicial ---
 app.get("/", (req, res) => {
   let jobs = [];
   try {
@@ -63,13 +50,10 @@ app.get("/", (req, res) => {
   } catch (error) {
     logger.error("Erro ao ler jobs.json: " + error.message);
   }
-
   res.render("index", { jobs });
 });
 
-
-
-// Função de scraping que substitui as vagas antigas por novas
+// --- Função de scraping ---
 async function atualizarVagas() {
   try {
     logger.info("Buscando vagas em minha região...");
@@ -100,11 +84,12 @@ async function atualizarVagas() {
     if (jobs.length > 0) {
       const filteredJobs = jobs.filter(job => job.description !== "Descrição não disponível");
 
-      // Salva somente as vagas novas, sobrescrevendo o arquivo
-      fs.writeFileSync(JOBS_FILE, JSON.stringify(filteredJobs, null, 2));
-      logger.info("Vagas salvas com sucesso (substituindo as anteriores).");
+      // --- Salva jobs.json direto em /public ---
+      fs.writeFileSync(JOBS_FILE, JSON.stringify(filteredJobs, null, 2), "utf-8");
+      logger.info("Vagas salvas com sucesso em /public (substituindo as anteriores).");
 
-      generateStatic(); // Gera HTML estático com as novas vagas
+      // --- Gera HTML estático ---
+      generateStatic();
     } else {
       logger.warn("Nenhuma vaga encontrada.");
     }
@@ -115,31 +100,11 @@ async function atualizarVagas() {
   }
 }
 
-
-
-// Rota para servir o jobs.json
-app.get("/jobs.json", (req, res) => {
-    const jobsFilePath = path.join(__dirname, "jobs.json");
-
-    fs.readFile(jobsFilePath, "utf8", (err, data) => {
-        if (err) {
-            console.error("Erro ao ler jobs.json:", err);
-            return res.status(500).json({ error: "Não foi possível ler jobs.json" });
-        }
-
-        try {
-            const jobs = JSON.parse(data); // garante que o JSON está válido
-            res.json(jobs);
-        } catch (parseErr) {
-            console.error("Erro ao parsear jobs.json:", parseErr);
-            res.status(500).json({ error: "JSON inválido" });
-        }
-    });
-});
-
-// Inicia o servidor e executa scraping ao iniciar
-const PORT = 8081;
-app.listen(PORT, async () => {
-  logger.info(`Servidor rodando em http://localhost:${PORT}`);
-  await atualizarVagas(); // Executa o scraping ao iniciar
-});
+// --- Inicia o servidor e executa scraping ao iniciar ---
+(async () => {
+  await atualizarVagas(); // 1️⃣ Faz o scraping e gera o HTML
+  const PORT = process.env.PORT || 8081;
+  app.listen(PORT, () => {
+    logger.info(`Servidor rodando em http://localhost:${PORT}`);
+  });
+})();
