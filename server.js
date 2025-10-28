@@ -29,14 +29,12 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // --- Servir arquivos estáticos ---
-app.use(
-  "/public",
-  express.static(path.join(__dirname, "public"), {
-    setHeaders: (res, filePath) => {
-      if (filePath.endsWith(".css")) res.setHeader("Content-Type", "text/css");
-      if (filePath.endsWith(".js")) res.setHeader("Content-Type", "application/javascript");
-    },
-  })
+app.use(express.static(path.join(__dirname, "public"), {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith(".css")) res.setHeader("Content-Type", "text/css");
+    if (filePath.endsWith(".js")) res.setHeader("Content-Type", "application/javascript");
+  },
+})
 );
 
 // --- Página inicial ---
@@ -79,17 +77,17 @@ async function atualizarVagas() {
         const descriptionElement = jobEl.querySelector('[style*="line-height:20px"]');
         const description = descriptionElement
           ? Array.from(descriptionElement.childNodes)
-              .map(node => {
-                if (node.nodeType === Node.TEXT_NODE) {
-                  return node.textContent.trim();
-                } else if (node.nodeType === Node.ELEMENT_NODE) {
-                  return node.innerText.trim();
-                } else {
-                  return '';
-                }
-              })
-              .filter(text => text.length > 0)
-              .join('\n')
+            .map(node => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                return node.textContent.trim();
+              } else if (node.nodeType === Node.ELEMENT_NODE) {
+                return node.innerText.trim();
+              } else {
+                return '';
+              }
+            })
+            .filter(text => text.length > 0)
+            .join('\n')
           : "Descrição não disponível";
 
         // --- Captura email e telefone ---
