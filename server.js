@@ -71,11 +71,38 @@ async function atualizarVagas() {
     const jobs = await page.evaluate(() => {
       const jobElements = document.querySelectorAll("#anuncio-dest > div");
       const today = new Date().toISOString();
+
       return Array.from(jobElements).map((jobEl) => {
         const title = jobEl.querySelector(".titulo-anuncio")?.innerText.trim() || "Título não disponível";
+
+        // --- Captura descrição completa, mantendo quebras e elementos internos ---
         const descriptionElement = jobEl.querySelector('[style*="line-height:20px"]');
-        const description = descriptionElement?.innerText.trim() || "Descrição não disponível";
-        return { title, description, dateCollected: today };
+        const description = descriptionElement
+          ? Array.from(descriptionElement.childNodes)
+              .map(node => {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  return node.textContent.trim();
+                } else if (node.nodeType === Node.ELEMENT_NODE) {
+                  return node.innerText.trim();
+                } else {
+                  return '';
+                }
+              })
+              .filter(text => text.length > 0)
+              .join('\n')
+          : "Descrição não disponível";
+
+        // --- Captura email e telefone ---
+        let email = "";
+        let phone = "";
+
+        const emailEl = jobEl.querySelector('a[href^="mailto:"]');
+        if (emailEl) email = emailEl.getAttribute("href").replace("mailto:", "").trim();
+
+        const phoneEl = jobEl.querySelector('a[href^="tel:"], a[href*="wa.me"]');
+        if (phoneEl) phone = phoneEl.getAttribute("href").replace(/[^0-9]/g, "").trim();
+
+        return { title, description, email, phone, dateCollected: today };
       });
     });
 

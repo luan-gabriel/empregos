@@ -2,378 +2,208 @@
 <html lang="pt-BR">
 
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5494049082029237"
-        crossorigin="anonymous"></script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>016 Empregos Franca</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .custom-scroll::-webkit-scrollbar {
-            width: 6px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>016 Empregos Franca</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const menuBtn = document.getElementById("menu-btn");
+      const closeBtn = document.getElementById("close-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-        .custom-scroll::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 8px;
-        }
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.remove("hidden");
+      });
 
-        .custom-scroll::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8;
-        }
-
-        /* Evita rolagem dupla quando menu aberto */
-        body.menu-open {
-            overflow: hidden;
-        }
-    </style>
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+  </script>
 </head>
 
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <!-- HEADER -->
-    <header class="bg-white border-b sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <img src="/public/016empregos.jpg" alt="016 Empregos Franca"
-                    class="w-10 h-10 rounded-full object-cover">
-                <div>
-                    <div class="text-lg font-semibold">016 Empregos Franca</div>
-                    <div class="text-sm text-gray-500">Conectando talentos e oportunidades</div>
-                </div>
-            </a>
-
-            <!-- Botão hambúrguer -->
-            <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none">
-                ☰
-            </button>
-
-            <!-- Botões desktop -->
-            <div class="hidden lg:flex items-center gap-3">
-                <a href="planos.html"
-                    class="px-4 py-2 rounded-md bg-green-600 hover:bg-green-700 text-white flex items-center gap-2">
-                    💼 <span>Anunciar</span>
-                </a>
-
-                <a href="https://chat.whatsapp.com/FejC0MSgfOt6FlH9RSLVCs" target="_blank"
-                    class="px-4 py-2 rounded-md border border-green-600 text-green-700 hover:bg-green-50 flex items-center gap-2">
-                    💬 <span>Entrar no Grupo</span>
-                </a>
-            </div>
+  <!-- Header -->
+  <header class="bg-white shadow-md w-full">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <div class="flex items-center space-x-3">
+        <img src="/public//016empregos.jpg" alt="Logo" class="w-10 h-10">
+        <div>
+          <h1 class="text-lg font-bold text-gray-800">016 Empregos Franca</h1>
+          <p class="text-sm text-gray-500">Conectando talentos e oportunidades</p>
         </div>
+      </div>
 
-        <!-- MENU MOBILE -->
-        <div id="mobile-menu"
-            class="hidden fixed inset-0 bg-white z-40 p-5 overflow-y-auto transition-all duration-300 lg:hidden">
-            <div class="flex justify-between items-center mb-5">
-                <h2 class="text-lg font-semibold">Menu</h2>
-                <button id="close-menu" class="text-2xl">✖</button>
-            </div>
+      <!-- Desktop Buttons -->
+      <div class="hidden md:flex items-center space-x-3">
+        <a href="/public/planos.html" class="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600">Anunciar</a>
+        <a href="https://chat.whatsapp.com/FejC0MSgfOt6FlH9RSLVCs" class="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium hover:bg-green-200">Entrar no Grupo</a>
+      </div>
 
-            <a href="planos.html"
-                class="block px-4 py-3 rounded-md bg-green-600 hover:bg-green-700 text-white mb-3 text-center">
-                💼 Anunciar
-            </a>
-            <a href="https://chat.whatsapp.com/FejC0MSgfOt6FlH9RSLVCs" target="_blank"
-                class="block px-4 py-3 rounded-md border border-green-600 text-green-700 hover:bg-green-50 mb-6 text-center">
-                💬 Entrar no Grupo
-            </a>
+      <!-- Mobile Hamburger -->
+      <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+      </button>
+    </div>
+  </header>
 
-             <h4 class="text-white font-semibold mb-3">Contato</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>📍 Franca - SP</li>
-                    <li>📧 <a href="mailto:contato@empregosemfranca.com"
-                            class="hover:text-white">contato@empregosemfranca.com</a></li>
-                    <li>📱 <a href="https://wa.me/55016991242066" class="hover:text-white">WhatsApp: (16) 99124-2066</a>
-                    </li>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-white z-50 overflow-y-auto">
+    <div class="p-4 space-y-4">
+      <button id="close-menu-btn" class="float-right text-gray-700">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
 
-                    <ul class="space-y-2 text-sm">
-                    <li><a href="sobre.html" class="hover:text-white">Sobre Nós</a></li>
-                    <li><a href="planos.html" class="hover:text-white">Anuncie Conosco</a></li>
-                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
-                    <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
-                </ul>
-                </ul>
+      <div class="pt-8 flex flex-col space-y-3 border-b pb-4">
+        <a href="#" class="bg-green-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-green-600 text-center">Anunciar</a>
+        <a href="#" class="bg-green-100 text-green-700 px-4 py-2 rounded-lg font-medium hover:bg-green-200 text-center">Entrar no Grupo</a>
+      </div>
 
-            <hr class="my-4" />
-            
+      <!-- Filtro de cargos no mobile -->
+      <div class="mt-4">
+        <h2 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+          <span class="mr-2">🔍</span> Filtrar por cargo
+        </h2>
+        <div class="max-h-64 overflow-y-auto border rounded-lg p-3 bg-gray-50">
+          <% const cargosUnicos = [...new Set(jobs.map(j => j.title.trim()))]; %>
+          <% cargosUnicos.forEach(cargo => { %>
+          <label class="flex items-center space-x-2 py-1">
+            <input type="checkbox" value="<%= cargo %>" class="cargo-checkbox">
+            <span><%= cargo %></span>
+          </label>
+          <% }) %>
         </div>
-    </header>
+      </div>
 
-    <!-- HERO -->
-    <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-10">
-        <div class="container mx-auto px-4 text-center">
-            <h1 class="text-2xl md:text-3xl font-extrabold mb-2">Vagas em Franca — encontre sua próxima oportunidade
-            </h1>
-            <p class="text-sm md:text-base opacity-90 mb-6">Pesquise por cargo, empresa ou palavra-chave. Atualizado
-                diariamente.</p>
+      <div class="mt-6 pt-4 border-t text-center text-gray-500 text-sm">
+        © <%= new Date().getFullYear() %> Empregos Franca — Todos os direitos reservados
+      </div>
+    </div>
+  </div>
 
-            <div class="max-w-3xl mx-auto">
-                <div class="flex gap-2 shadow-lg rounded-md overflow-hidden">
-                    <input id="search-input" type="search" placeholder="Ex: Atendente, auxiliar de produção, vendedor"
-                        class="w-full px-4 py-3 text-gray-800 focus:outline-none" />
-                    <button id="clear-search" class="px-4 bg-white/10 hover:bg-white/20 text-sm">Limpar</button>
-                </div>
-            </div>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-600 to-blue-500 text-white py-10 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Vagas em Franca — encontre sua próxima oportunidade</h2>
+    <p class="text-blue-100 mb-5">Pesquise por cargo, empresa ou palavra-chave. Atualizado diariamente.</p>
+    <div class="flex justify-center">
+      <input type="text" id="search-input" placeholder="Ex: Atendente, auxiliar de produção, vendedor"
+        class="w-3/4 md:w-1/3 px-4 py-2 rounded-l-lg text-gray-700 focus:outline-none">
+      <button id="clear-btn" class="bg-blue-700 px-4 py-2 rounded-r-lg hover:bg-blue-800">Limpar</button>
+    </div>
+  </section>
+
+  <!-- Conteúdo Principal -->
+  <main class="container mx-auto flex flex-col md:flex-row gap-6 p-4 flex-grow">
+
+    <!-- Sidebar Desktop -->
+    <aside class="hidden md:block md:w-1/4 bg-white rounded-2xl shadow-md p-4 h-fit">
+      <h2 class="text-lg font-semibold text-gray-700 mb-3 flex items-center">
+        <span class="mr-2">🔍</span> Filtrar por cargo
+      </h2>
+      <div class="max-h-80 overflow-y-auto border rounded-lg p-3 bg-gray-50">
+        <% cargosUnicos.forEach(cargo => { %>
+        <label class="flex items-center space-x-2 py-1">
+          <input type="checkbox" value="<%= cargo %>" class="cargo-checkbox">
+          <span><%= cargo %></span>
+        </label>
+        <% }) %>
+      </div>
+    </aside>
+
+    <!-- Lista de vagas -->
+    <section id="jobs-container" class="flex-1 grid grid-cols-1 md:grid-cols-2 gap-4">
+      <% jobs.forEach(job => { %>
+      <div class="bg-white p-5 rounded-2xl shadow-md hover:shadow-lg transition w-full relative">
+        <h3 class="text-lg font-semibold text-blue-700 mb-2"><%= job.title %></h3>
+        <p class="text-gray-700 mb-3"><%- job.description %></p>
+
+        <% if (job.email || job.phone) { %>
+        <div class="flex flex-wrap gap-3 mb-3">
+          <% if (job.email) { %>
+          <a href="mailto:<%= job.email %>" class="text-blue-600 font-medium hover:underline break-all"><%= job.email %></a>
+          <% } %>
+          <% if (job.phone) { %>
+          <a href="https://wa.me/<%= job.phone.replace(/\D/g, '') %>" target="_blank" class="text-green-600 font-medium hover:underline break-all"><%= job.phone %></a>
+          <% } %>
         </div>
+        <% } %>
+
+        <p class="text-sm text-gray-500 flex items-center space-x-1 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span><%= job.date %></span>
+        </p>
+
+        <!-- Botão Compartilhar -->
+        <button class="share-btn bg-blue-600 text-white px-3 py-1 rounded-lg hover:bg-blue-700 text-sm"
+          onclick="shareJob('<%= encodeURIComponent(job.title) %>')">Compartilhar</button>
+      </div>
+      <% }) %>
     </section>
+  </main>
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <!-- SIDEBAR: Filtros de Cargos -->
-        <aside class="lg:col-span-1">
-            <div class="bg-white rounded-xl shadow-lg p-6 sticky top-6">
-                <h3 class="font-semibold mb-4 text-lg flex items-center gap-2 text-blue-600">
-                    🎯 Filtrar por cargo
-                </h3>
+  <!-- Rodapé -->
+  <footer class="bg-white border-t text-center text-gray-500 py-4 mt-auto">
+    © <%= new Date().getFullYear() %> Empregos Franca — Todos os direitos reservados.
+  </footer>
 
-                <div id="tag-filter-box" class="space-y-3 max-h-[420px] overflow-y-auto pr-2 custom-scroll">
-                    <!-- checkboxes serão gerados dinamicamente aqui -->
-                </div>
+  <script>
+  // Função compartilhar vaga
+  function shareJob(title) {
+    const url = window.location.href + "?vaga=" + title;
+    if (navigator.share) {
+      navigator.share({
+        title: 'Vaga: ' + decodeURIComponent(title),
+        url: url
+      }).catch(console.error);
+    } else {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Link copiado: ' + url);
+      });
+    }
+  }
 
-                <hr class="my-5 border-gray-200" />
+  const checkboxes = document.querySelectorAll('.cargo-checkbox');
+  const cards = document.querySelectorAll('#jobs-container > div');
+  const searchInput = document.getElementById('search-input');
 
-                <div>
-                    <h4 class="font-medium text-sm mb-2 text-gray-700">Ordenar por</h4>
-                    <select id="sort-select"
-                        class="w-full border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
-                        <option value="recent">Mais recentes</option>
-                        <option value="alpha">A → Z (título)</option>
-                    </select>
-                </div>
-            </div>
-        </aside>
+  function filterCards() {
+    const searchTerm = searchInput.value.toLowerCase();
+    const ativos = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
 
-        <!-- LISTA DE VAGAS -->
-        <section class="lg:col-span-3">
-            <div id="manual-jobs" class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            <div id="search-results" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
-            <div class="mt-6 flex justify-center">
-                <button id="load-more" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700">Carregar
-                    mais</button>
-            </div>
-        </section>
-    </main>
+    cards.forEach(card => {
+      const titulo = card.querySelector('h3').innerText.toLowerCase();
+      const descricao = card.querySelector('p').innerText.toLowerCase();
+      const matchSearch = titulo.includes(searchTerm) || descricao.includes(searchTerm);
+      const matchCheckbox = ativos.length === 0 || ativos.includes(card.querySelector('h3').innerText);
+      card.style.display = matchSearch && matchCheckbox ? '' : 'none';
+    });
+  }
 
-    <!-- RODAPÉ -->
-    <footer class="bg-gray-900 text-gray-300 mt-10 pt-10">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h3 class="text-white font-semibold text-lg mb-3">016 Empregos Franca</h3>
-                <p class="text-sm leading-relaxed">
-                    Conectamos talentos e oportunidades em Franca e região.
-                    Seu portal gratuito de vagas atualizado diariamente.
-                </p>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-3">Institucional</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="sobre.html" class="hover:text-white">Sobre Nós</a></li>
-                    <li><a href="planos.html" class="hover:text-white">Anuncie Conosco</a></li>
-                    <li><a href="#" class="hover:text-white">Termos de Uso</a></li>
-                    <li><a href="#" class="hover:text-white">Política de Privacidade</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-3">Categorias Populares</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>Atendimento e Vendas</li>
-                    <li>Administração</li>
-                    <li>Indústria e Produção</li>
-                    <li>Serviços Gerais</li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-3">Contato</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>📍 Franca - SP</li>
-                    <li>📧 <a href="mailto:contato@empregosemfranca.com"
-                            class="hover:text-white">contato@empregosemfranca.com</a></li>
-                    <li>📱 <a href="https://wa.me/55016991242066" class="hover:text-white">WhatsApp: (16) 99124-2066</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="border-t border-gray-800 mt-10 py-4 text-center text-sm text-gray-500">
-            © 2025 016 Empregos Franca — Todos os direitos reservados.
-        </div>
-    </footer>
-
-    <script>
-        // MENU MOBILE
-        const menuBtn = document.getElementById('menu-btn');
-        const closeMenu = document.getElementById('close-menu');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            document.body.classList.add('menu-open');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            document.body.classList.remove('menu-open');
-        });
-
-        // Copia filtros para menu mobile
-        function syncFilters() {
-            const tags = document.getElementById('tag-filter-box');
-            const mobileTags = document.getElementById('mobile-tag-filter');
-            if (tags && mobileTags) {
-                mobileTags.innerHTML = tags.innerHTML;
-            }
-        }
-
-        // Seu script original de vagas
-        async function loadJobs() {
-            try {
-                const response = await fetch('public/jobs.json');
-                const jobs = await response.json();
-                initializeJobs(jobs);
-                syncFilters();
-            } catch (err) {
-                console.error('Erro ao carregar jobs.json:', err);
-            }
-        }
-
-        function initializeJobs(jobs) {
-            let filteredJobs = [...jobs];
-            const jobsPerPage = 8;
-            let currentPage = 1;
-
-            const searchInput = document.getElementById('search-input');
-            const clearSearchBtn = document.getElementById('clear-search');
-            const tagFilterBox = document.getElementById('tag-filter-box');
-            const sortSelect = document.getElementById('sort-select');
-            const loadMoreBtn = document.getElementById('load-more');
-            const resultsContainer = document.getElementById('search-results');
-
-            // 🔹 Cria uma lista única de títulos de vagas
-            const uniqueTitles = [...new Set(jobs.map(j => j.title.trim()))];
-
-            // 🔹 Gera os checkboxes de filtro
-            tagFilterBox.innerHTML = uniqueTitles.map(title => `
-    <label class="flex items-center gap-2 border-b py-1 cursor-pointer hover:bg-blue-50 rounded transition">
-      <input type="checkbox" class="tag-checkbox accent-blue-600" value="${title.toLowerCase()}">
-      <span class="text-sm">${title}</span>
-    </label>
-  `).join('');
-
-            // 🔹 Eventos
-            searchInput.addEventListener('input', handleSearch);
-            clearSearchBtn.addEventListener('click', () => {
-                searchInput.value = '';
-                handleSearch();
-            });
-            sortSelect.addEventListener('change', () => {
-                sortJobs();
-                renderJobs();
-            });
-            tagFilterBox.addEventListener('change', handleCheckboxFilter);
-            loadMoreBtn.addEventListener('click', () => {
-                currentPage++;
-                renderJobs();
-            });
-
-            // 🔹 Filtro múltiplo com checkboxes
-            function handleCheckboxFilter() {
-                const selected = [...document.querySelectorAll('.tag-checkbox:checked')].map(cb => cb.value);
-                if (selected.length === 0) {
-                    filteredJobs = [...jobs];
-                } else {
-                    filteredJobs = jobs.filter(j =>
-                        selected.some(tag => j.title.toLowerCase() === tag)
-                    );
-                }
-                currentPage = 1;
-                renderJobs();
-            }
-
-            // 🔹 Destaca telefones, WhatsApp e e-mails com ícones
-            function highlightText(text) {
-                if (!text) return '';
-
-                // WhatsApp (com ou sem +55)
-                text = text.replace(/(\+?55\s?\(?\d{2}\)?\s?\d{4,5}-?\d{4})/g, match => {
-                    const cleaned = match.replace(/\D/g, '');
-                    return `<a href="https://wa.me/${cleaned}" target="_blank" class="text-green-600 font-semibold hover:underline">💬 ${match}</a>`;
-                });
-
-                // Telefones comuns
-                text = text.replace(/(\(?\d{2}\)?\s?\d{4,5}-?\d{4})/g, match => {
-                    const cleaned = match.replace(/\D/g, '');
-                    return `<a href="https://wa.me/55${cleaned}" target="_blank" class="text-green-600 font-semibold hover:underline">📞 ${match}</a>`;
-                });
-
-                // E-mails
-                text = text.replace(/([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g,
-                    '<a href="mailto:$1" class="text-blue-600 font-medium hover:underline">📧 $1</a>');
-
-                return text;
-            }
-
-            // 🔹 Extrai link WhatsApp para botão “Candidatar-se”
-            function extractWhatsAppLink(text) {
-                const match = text.match(/(\+?55\s?\(?\d{2}\)?\s?\d{4,5}-?\d{4})/);
-                if (match) {
-                    const cleaned = match[0].replace(/\D/g, '');
-                    return `https://wa.me/${cleaned}`;
-                }
-                return null;
-            }
-
-            // 🔹 Pesquisa
-            function handleSearch() {
-                const term = searchInput.value.toLowerCase();
-                filteredJobs = jobs.filter(j =>
-                    j.title.toLowerCase().includes(term) ||
-                    j.description.toLowerCase().includes(term)
-                );
-                currentPage = 1;
-                renderJobs();
-            }
-
-            // 🔹 Ordenação
-            function sortJobs() {
-                const type = sortSelect.value;
-                if (type === 'recent') {
-                    filteredJobs.sort((a, b) => new Date(b.dateCollected) - new Date(a.dateCollected));
-                } else if (type === 'alpha') {
-                    filteredJobs.sort((a, b) => a.title.localeCompare(b.title));
-                }
-            }
-
-            // 🔹 Renderização dos cards
-            function renderJobs() {
-                sortJobs();
-                const start = 0;
-                const end = currentPage * jobsPerPage;
-                const visibleJobs = filteredJobs.slice(start, end);
-
-                resultsContainer.innerHTML = visibleJobs.map(job => {
-                    const highlightedDesc = highlightText(job.description);
-                    const whatsappLink = extractWhatsAppLink(job.description);
-                    return `
-        <div class="bg-white rounded-lg shadow p-5 hover:shadow-lg transition border border-gray-100">
-          <h3 class="font-bold text-lg mb-2 text-blue-700">${job.title}</h3>
-          <p class="text-sm text-gray-700 leading-relaxed">${highlightedDesc}</p>
-          <div class="flex items-center justify-between mt-4">
-            <p class="text-xs text-gray-400">📅 ${new Date(job.dateCollected).toLocaleDateString('pt-BR')}</p>
-            ${whatsappLink ? `<a href="${whatsappLink}" target="_blank" class="bg-green-600 text-white px-3 py-1 rounded text-xs hover:bg-green-700">📩 Candidatar-se</a>` : ''}
-          </div>
-        </div>
-      `;
-                }).join('');
-
-                loadMoreBtn.style.display = filteredJobs.length > end ? 'block' : 'none';
-            }
-
-            renderJobs();
-        }
-
-        loadJobs();
-    </script>
+  // Eventos
+  searchInput.addEventListener('input', filterCards);
+  checkboxes.forEach(cb => cb.addEventListener('change', filterCards));
+  document.getElementById('clear-btn').addEventListener('click', () => {
+    searchInput.value = '';
+    checkboxes.forEach(cb => cb.checked = false);
+    filterCards();
+  });
+</script>
 
 </body>
-
 </html>

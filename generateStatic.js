@@ -2,39 +2,27 @@ const fs = require("fs");
 const path = require("path");
 const ejs = require("ejs");
 
-// --- Caminhos ---
-const JOBS_FILE = path.join(__dirname, "public", "jobs.json"); // agora dentro de public
-const OUTPUT_DIR = path.join(__dirname, "public"); // pasta de saída do HTML
+const JOBS_FILE = path.join(__dirname, "public", "jobs.json");
+const OUTPUT_FILE = path.join(__dirname, "public", "index.html");
+const TEMPLATE_FILE = path.join(__dirname, "views", "index.ejs");
 
 async function generateStatic() {
   try {
-    console.log("Gerando HTML estático...");
-
-    let jobs = [];
-
-    // Lê jobs.json gerado pelo server.js
-    if (fs.existsSync(JOBS_FILE)) {
-      jobs = JSON.parse(fs.readFileSync(JOBS_FILE, "utf-8"));
+    if (!fs.existsSync(JOBS_FILE)) {
+      console.error("jobs.json não encontrado!");
+      return;
     }
 
-    // Remove vagas sem descrição válida
-    jobs = jobs.filter(job => job.description && job.description !== "Descrição não disponível");
+    const jobsData = fs.readFileSync(JOBS_FILE, "utf-8");
+    const jobs = JSON.parse(jobsData);
 
-    console.log(`✅ Total de vagas válidas: ${jobs.length}`);
+    // Renderiza o EJS com os dados do jobs.json
+    const html = await ejs.renderFile(TEMPLATE_FILE, { jobs }, { async: true });
 
-    // Caminho do template EJS
-    const indexTemplatePath = path.join(__dirname, "views", "index.ejs");
-    const indexTemplate = fs.readFileSync(indexTemplatePath, "utf-8");
-
-    // Renderiza o HTML
-    const indexHtml = ejs.render(indexTemplate, { jobs, baseUrl: "/" });
-
-    // Gera o arquivo estático
-    fs.writeFileSync(path.join(OUTPUT_DIR, "index.html"), indexHtml, "utf-8");
-
-    console.log("✅ HTML gerado com sucesso em /public!");
-  } catch (error) {
-    console.error("❌ Erro ao gerar o HTML:", error);
+    fs.writeFileSync(OUTPUT_FILE, html, "utf-8");
+    console.log("✅ index.html estático gerado com sucesso!");
+  } catch (err) {
+    console.error("Erro ao gerar site estático:", err);
   }
 }
 
