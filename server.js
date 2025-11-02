@@ -34,8 +34,7 @@ app.use(express.static(path.join(__dirname, "public"), {
     if (filePath.endsWith(".css")) res.setHeader("Content-Type", "text/css");
     if (filePath.endsWith(".js")) res.setHeader("Content-Type", "application/javascript");
   },
-})
-);
+}));
 
 // --- Página inicial ---
 app.get("/", (req, res) => {
@@ -49,6 +48,15 @@ app.get("/", (req, res) => {
     logger.error("Erro ao ler jobs.json: " + error.message);
   }
   res.render("index", { jobs });
+});
+
+// --- Página de Planos ---
+app.get("/planos", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "planos.html"));
+});
+
+app.get("/planos.html", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "planos.html"));
 });
 
 // --- Função de scraping ---

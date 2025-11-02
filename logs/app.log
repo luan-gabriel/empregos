@@ -947,3 +947,18 @@ info: Página carregada com sucesso. {"timestamp":"2025-10-30T12:29:05.586Z"}
 info: Vagas encontradas: 398 {"timestamp":"2025-10-30T12:29:05.628Z"}
 info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2025-10-30T12:29:05.632Z"}
 info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-10-30T12:29:19.524Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-11-02T11:44:59.972Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-11-02T11:45:05.839Z"}
+info: Vagas encontradas: 356 {"timestamp":"2025-11-02T11:45:05.871Z"}
+info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2025-11-02T11:45:05.875Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-11-02T11:45:06.494Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-11-02T11:59:53.649Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-11-02T11:59:58.931Z"}
+info: Vagas encontradas: 356 {"timestamp":"2025-11-02T11:59:58.954Z"}
+info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2025-11-02T11:59:58.958Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-11-02T12:00:00.098Z"}
+info: Buscando vagas em minha região... {"timestamp":"2025-11-02T20:27:57.017Z"}
+info: Página carregada com sucesso. {"timestamp":"2025-11-02T20:28:03.110Z"}
+info: Vagas encontradas: 356 {"timestamp":"2025-11-02T20:28:03.135Z"}
+info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2025-11-02T20:28:03.138Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2025-11-02T20:28:03.578Z"}
