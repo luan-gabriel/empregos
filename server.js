@@ -102,11 +102,17 @@ async function atualizarVagas() {
         let email = "";
         let phone = "";
 
-        const emailEl = jobEl.querySelector('a[href^="mailto:"]');
-        if (emailEl) email = emailEl.getAttribute("href").replace("mailto:", "").trim();
+        // Regex Email
+        const emailMatch = description.match(/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+/);
+        if (emailMatch) {
+          email = emailMatch[0];
+        }
 
-        const phoneEl = jobEl.querySelector('a[href^="tel:"], a[href*="wa.me"]');
-        if (phoneEl) phone = phoneEl.getAttribute("href").replace(/[^0-9]/g, "").trim();
+        // Regex Telefone Brasil
+        const phoneMatch = description.match(/(\(?\d{2}\)?\s?\d{4,5}-?\d{4})/);
+        if (phoneMatch) {
+           phone = phoneMatch[0].replace(/\D/g, "");
+        }
 
         return { title, description, email, phone, dateCollected: today };
       });
