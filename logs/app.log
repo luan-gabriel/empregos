@@ -1052,3 +1052,8 @@ info: Página carregada com sucesso. {"timestamp":"2026-02-27T12:39:40.600Z"}
 info: Vagas encontradas: 298 {"timestamp":"2026-02-27T12:39:40.619Z"}
 info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2026-02-27T12:39:40.624Z"}
 info: Servidor rodando em http://localhost:8081 {"timestamp":"2026-02-27T12:39:41.001Z"}
+info: Buscando vagas em minha região... {"timestamp":"2026-03-01T10:37:54.212Z"}
+info: Página carregada com sucesso. {"timestamp":"2026-03-01T10:37:59.699Z"}
+info: Vagas encontradas: 272 {"timestamp":"2026-03-01T10:37:59.721Z"}
+info: Vagas salvas com sucesso em /public (substituindo as anteriores). {"timestamp":"2026-03-01T10:37:59.726Z"}
+info: Servidor rodando em http://localhost:8081 {"timestamp":"2026-03-01T10:38:00.131Z"}
